@@ -1,0 +1,10 @@
+streamlit
+langchain
+langchain-community
+langchain-core 
+langchain-ollama
+chromadb
+neo4j
+sentence-transformers
+pypdf
+langchain-text-splitters
