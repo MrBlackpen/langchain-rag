@@ -41,3 +41,7 @@ workspace_metadata/
 
 # Python test cache
 .pytest_cache/
+
+# Optional lock files
+poetry.lock
+Pipfile.lock

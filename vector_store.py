@@ -61,7 +61,7 @@ def store_document(text, workspace_id):
     vector_db.persist()
 
 
-def search_similar(query, workspace_id, k=5):
+def search_similar(query, workspace_id, k=3):
     vector_db = get_vector_db(workspace_id)
 
     results = vector_db.similarity_search(

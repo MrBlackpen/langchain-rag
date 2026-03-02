@@ -55,20 +55,6 @@ def extract_and_store_facts(text, workspace_id):
                 add_fact(parts[0], parts[1], parts[2], workspace_id)
 
 
-def extract_entity(query):
-    prompt = f"""
-    Extract ONLY the main entity name.
-    Remove numbers, dates, extra words.
-
-    Question:
-    {query}
-
-    Return only entity name.
-    """
-
-    return llm.invoke(prompt).content.strip()
-
-
 def query_kg(entity, workspace_id):
     try:
         with driver.session(database=NEO4J_DB) as session:

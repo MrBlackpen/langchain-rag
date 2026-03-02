@@ -15,7 +15,7 @@ from langchain_core.messages import SystemMessage, HumanMessage, AIMessage
 
 # ---------------- BASIC CONFIG ----------------
 st.set_page_config(layout="wide")
-st.title("Hybrid Multi-Workspace RAG Chatbot")
+st.title("InChat")
 
 llm = ChatOllama(model=OLLAMA_MODEL)
 
@@ -169,7 +169,7 @@ if user_input:
     )
 
     # Add intra-chat memory
-    for role, msg in st.session_state.history[-6:]:
+    for role, msg in st.session_state.history[-3:]:
         if role == "User":
             messages.append(HumanMessage(content=msg))
         else:
